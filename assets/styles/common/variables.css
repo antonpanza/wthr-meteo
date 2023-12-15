@@ -1,0 +1,9 @@
+:root {
+    --title-color: #313341;
+    --text-color: #303345;
+    --link-text: #D6996B;
+    --inactive-text: #9C9EAA;
+
+    --background-color: rgba(255, 255, 255, 0.36);
+    --background-gradient: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);
+}
