@@ -1,3 +1,90 @@
-body {
-    background-color: indianred;
+/* .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+.main{
+    background: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);
+} */
+
+body{
+    background: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.border{
+    width: 218px;
+    height: 471px;
+    border-radius: 20px;
+    border: solid white 5px;
+    z-index: 99;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    align-items: center;
+    
+}
+.header div:nth-child(2) {
+    align-self: flex-start;
+}
+.title{
+    padding: 8px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.country{
+    color: #313341;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.date{
+    padding-top: 6px;
+    color: #9A938C;
+    font-family: Inter;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.weather_now{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 30px;
+    font-size: 12px;
+}
+.weather_now-big_numbers{
+    /* display: flex; */
+    color: #303345;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.celsius{
+    font-size: 12px;
+  
+}
+.weather-word{
+    text-align: center;
+    font-size: 14px;
+    padding-right: 17px;
+}
+.weather_option{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.weather_option div {
+    display: flex;
+    justify-content: space-between;
+    /* Другие стили для элементов div внутри .weather_option, если необходимо */
+  }
