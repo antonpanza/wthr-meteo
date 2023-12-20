@@ -9,7 +9,8 @@
 } */
 
 body{
-    background: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);
+    font-family: var(--font-regular);
+    background: var(--background-gradient);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +41,7 @@ body{
 }
 .country{
     color: #313341;
-    font-family: Inter;
+    font-family: var(--font-regular);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -49,7 +50,7 @@ body{
 .date{
     padding-top: 6px;
     color: #9A938C;
-    font-family: Inter;
+    font-family: var(--font-regular);
     font-size: 9px;
     font-style: normal;
     font-weight: 400;
@@ -71,7 +72,6 @@ body{
 }
 .celsius{
     font-size: 12px;
-  
 }
 .weather-word{
     text-align: center;
