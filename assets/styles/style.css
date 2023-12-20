@@ -1,90 +1,82 @@
-/* .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font-regular);
+  background: var(--background-gradient);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
-.main{
-    background: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);
-} */
 
-body{
-    font-family: var(--font-regular);
-    background: var(--background-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.border {
+  width: 218px;
+  height: 471px;
+  border-radius: 20px;
+  border: solid white 5px;
+  z-index: 99;
 }
-.border{
-    width: 218px;
-    height: 471px;
-    border-radius: 20px;
-    border: solid white 5px;
-    z-index: 99;
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 11px;
+  text-align: center;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 10px;
-    align-items: center;
-    
+
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 16px;
+  height: 68px;
 }
-.header div:nth-child(2) {
-    align-self: flex-start;
+.main-title-country {
+  color: #313341;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
-.title{
-    padding: 8px 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.main-title-date {
+  color: #9A938C;
+  font-family: Inter;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.country{
-    color: #313341;
-    font-family: var(--font-regular);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+.main-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.date{
-    padding-top: 6px;
-    color: #9A938C;
-    font-family: var(--font-regular);
-    font-size: 9px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.main-row-temp-number {
+  color: #303345;
+  font-family: Inter;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.weather_now{
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 30px;
-    font-size: 12px;
+.main-row-temp-celsius {
+  font-size: 12px;
 }
-.weather_now-big_numbers{
-    /* display: flex; */
-    color: #303345;
-    font-size: 43px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.celsius{
-    font-size: 12px;
-}
-.weather-word{
-    text-align: center;
-    font-size: 14px;
-    padding-right: 17px;
-}
-.weather_option{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
-.weather_option div {
-    display: flex;
-    justify-content: space-between;
-    /* Другие стили для элементов div внутри .weather_option, если необходимо */
-  }
