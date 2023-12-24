@@ -23,6 +23,7 @@ body {
 .header__menu{
   height: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .header__inner {
@@ -60,10 +61,6 @@ body {
   .location__search:hover path {
     stroke: #F39876;
   }
-  .header__burger:hover {
-    background-color: #F39876;
-    transition: all .3s ease;
-  }
 }
 
 .header__burger {
@@ -71,8 +68,6 @@ body {
   width: 14px;
   height: 2px;
   background-color: var(--element-color);
-  transform: translateY(-50%);
-
 }
 .header__burger:after {
  position: absolute;
@@ -94,12 +89,128 @@ body {
   z-index: 999;
   background-color: inherit;
 }
-.menu__wrapper{
+@media (hover: hover) {
+  .header__menu:hover .header__burger {
+    background-color: #F39876;
+    transition: all .3s ease;
+  }
+}
+
+
+.menu__wrapper {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header__menu active {
+.header__menu .header__burger:after,
+.header__menu .header__burger:before {
+  transition: all .3s ease;
+}
+.header__menu.active .header__burger:before {
+  transform: rotate(-45deg)  translate(-5px, -1px);
+}
+.header__menu.active .header__burger:after {
+  transform: rotate(45deg)  translate(-3px, -1px);
+}
 
+
+.meteo__img {
+  width: 83px;
+  height: 80px;
+  background-size: cover;
+  background-image: url("../../assets/img/cludy.png");
+}
+
+.info__wrapper {
+  padding: 8px 18px;
+  line-height: normal;
+}
+.location__info {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+.date__info {
+  margin-top: 6px;
+  color: var(--parg-text);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.location__meteo--wrapper {
+  display: flex;
+  padding: 4px 30px;
+  gap: 10px;
+}
+.location__search,
+.header__menu {
+  width: 24px;
+  height: 24px;
+}
+
+.degree__wrapper {
+  text-align: center;
+}
+.meteo__data {
+  color: var(--text-color);
+  padding-top: 8px;
+}
+.meteo__degree {
+  font-size: 43px;
+  font-weight: 700;
+  position: relative;
+}
+
+.meteo__status {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.meteo__degree:before {
+  content: "°c";
+  font-size: 14px;
+  position: absolute;
+  right: -15px;
+  font-weight: 300;
+}
+
+
+.meteo__card--inner {
+  padding: 16px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meteo__card {
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.50);
+  background: rgba(255, 255, 255, 0.36);
+  display: flex;
+  padding: 8px 11px;
+}
+.card__image {
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07), 0px 9px 10px -3px rgba(23, 126, 37, 0.15);
+}
+
+
+.card__data {
+  color: var(--text-color);
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  justify-content: space-between;
+  width: 100%;
+}
+.data__status {
+  padding-right: 17px;
 }
