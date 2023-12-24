@@ -118,8 +118,11 @@ body {
 .meteo__img {
   width: 83px;
   height: 80px;
-  background-size: cover;
-  background-image: url("../../assets/img/cludy.png");
+  /*background-size: cover;
+  background-image: url("../../assets/img/cludy.png");*/
+}
+.meteo__img img {
+  width: 100%;
 }
 
 .info__wrapper {
