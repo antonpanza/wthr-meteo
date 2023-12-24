@@ -8,6 +8,7 @@ body {
 
 .app__wrapper {
   display: flex;
+  
 }
 .mobile__wrapper {
   border-radius: 18px;
@@ -19,11 +20,17 @@ body {
   margin: auto;
 }
 
+.header__menu{
+  height: 20px;
+  position: relative;
+}
 
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 12px 11px;
 }
 .location__search {
   cursor: pointer;
@@ -53,16 +60,46 @@ body {
   .location__search:hover path {
     stroke: #F39876;
   }
+  .header__burger:hover {
+    background-color: #F39876;
+    transition: all .3s ease;
+  }
 }
 
 .header__burger {
+  position: relative;
   width: 14px;
   height: 2px;
   background-color: var(--element-color);
+  transform: translateY(-50%);
+
 }
 .header__burger:after {
+ position: absolute;
   content: "";
+  top: 6px;
+  left: 1px;
+  width: 9px;
+  height: 2px;
+  z-index: 999;
+  background-color: inherit;
 }
 .header__burger:before {
+  position: absolute;
   content: "";
+  top: -6px;
+  right: 1px;
+  width: 9px;
+  height: 2px;
+  z-index: 999;
+  background-color: inherit;
+}
+.menu__wrapper{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__menu active {
+
 }
