@@ -26,3 +26,18 @@ const fetchData = async () => {
         });
 }
 fetchData()
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.swiper', {
+      // Настройки слайдера
+      
+      slidesPerView: 8, // Отображать по одному слайду
+    //   spaceBetween: 30, // Расстояние между слайдами
+    //   navigation: {
+    //     nextEl: '.swiper-button-next', // Стрелка "вперед"
+    //     prevEl: '.swiper-button-prev', // Стрелка "назад"
+    //   },
+    });
+  });
+

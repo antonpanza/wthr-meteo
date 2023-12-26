@@ -6,6 +6,9 @@
     --inactive-text: #9C9EAA;
     --parg-text: #9A938C;
     --element-color: #1B1919;
+    --inactive-tab: #D6996B;
+    --inactive-card:rgba(255, 255, 255, 0.30);
+    --active-card:rgba(255, 255, 255, 0.70);
 
     --background-color: rgba(255, 255, 255, 0.36);
     --background-gradient: linear-gradient(120deg, #FEE3BC 23.22%, #F39876 99.52%);

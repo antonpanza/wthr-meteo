@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -87,9 +88,140 @@
                     <div class="weatherInfo"></div>
                 </div>
             </main>
+            <footer class="footer">
+                <div class="tabs-title">
+                    <div class="tabs-wrapper">
+                        <span data-tab="today" class="tab active">Today</span>
+                        <span data-tab="tomorrow" class="tab">Tomorrow</span>
+                    </div>
+                    <a class="link-page">
+                        <span>Next 7 Days</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="6" viewBox="0 0 4 6" fill="none">
+                            <path d="M1 0.878693L3.12132 3.00001L1 5.12133" stroke="#D6996B" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
+                <div class="slider swiper">
+
+                    <div class="slider-scrollbar swiper-scrollbar"></div>
+
+                    <div class="slider-container swiper-wrapper">
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">00:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">03:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">06:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">09:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">12:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">15:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">18:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

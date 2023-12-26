@@ -1,9 +1,15 @@
+/* ---------------common--------------- */
+
+
 body {
   font-family: var(--font-regular);
   background: var(--background-gradient);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+.mobile__wrapper{
+  overflow: hidden;
 }
 
 .app__wrapper {
@@ -19,6 +25,11 @@ body {
   width: 218px;
   margin: auto;
 }
+
+
+/* ---------------common--------------- */
+/* ---------------header--------------- */
+
 
 .header__menu{
   height: 20px;
@@ -96,7 +107,6 @@ body {
   }
 }
 
-
 .menu__wrapper {
   height: 100%;
   display: flex;
@@ -113,6 +123,10 @@ body {
 .header__menu.active .header__burger:after {
   transform: rotate(45deg)  translate(-3px, -1px);
 }
+
+
+/* ---------------header--------------- */
+/* ---------------main--------------- */
 
 
 .meteo__img {
@@ -178,7 +192,6 @@ body {
   font-weight: 300;
 }
 
-
 .meteo__card--inner {
   padding: 16px 15px;
   display: flex;
@@ -201,7 +214,6 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07), 0px 9px 10px -3px rgba(23, 126, 37, 0.15);
 }
 
-
 .card__data {
   color: var(--text-color);
   font-size: 7px;
@@ -217,3 +229,65 @@ body {
 .data__status {
   padding-right: 17px;
 }
+
+
+/* ---------------main--------------- */
+/* ---------------footer--------------- */
+
+
+.tabs-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  padding: 0 16px 8px;
+  color: var(--inactive-tab);
+}
+
+.tab:first-child {
+  margin-right: 12px;
+}
+
+.tab.active {
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.link-page span:first-child {
+  margin-right: 6px;
+}
+
+.slider {
+  font-size: 7px;
+}
+
+.slider-container {
+  display: flex;
+  column-gap: 10px;
+  padding: 8px 0;
+}
+
+.slider-card {
+  padding: 8px 4px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--inactive-card);
+}
+
+.card-time {
+  color: var(--inactive-text);
+}
+
+.card-temp {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.card-img img {
+  height: 24px;
+  width: 24px;
+}
+
+
+
+
+/* ---------------footer--------------- */
