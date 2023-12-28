@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //     nextEl: '.swiper-button-next', // Стрелка "вперед"
     //     prevEl: '.swiper-button-prev', // Стрелка "назад"
     //   },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
     });
   });
 

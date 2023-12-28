@@ -1,0 +1,19 @@
+/* это пример как делать не стоит,
+но если того требует задача, и надо быстро,
+то можно пойти и на такой шаг
+единственное, о чём нужно помнить
+ - то, что может потребоваться повторно использовать либу со слайдером
+ поэтому свою кастомизацию готового слайдера нужно делать в отдельном файле
+ при этом, сами стильчики стоит приписать к уникальному названию твоего блока*/
+.hourly__forecast .swiper-horizontal>.swiper-scrollbar,
+.hourly__forecast .swiper-scrollbar.swiper-scrollbar-horizontal {
+    margin-top: 1px;
+    top: 0!important;
+    height: .5px!important;
+    background-color: #E2A272!important;
+}
+.hourly__forecast .swiper-scrollbar-drag {
+    top: -1px!important;
+    height: 3px!important;
+    background-color: #313341!important;
+}
