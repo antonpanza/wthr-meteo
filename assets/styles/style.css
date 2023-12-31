@@ -28,6 +28,8 @@ body {
 
 
 /* ---------------common--------------- */
+
+/* ----------------------------------------------------------- START PAGE----------------------------------------------------------- */
 /* ---------------header--------------- */
 
 
@@ -255,6 +257,19 @@ body {
 .link-page span:first-child {
   margin-right: 6px;
 }
+.link-page:hover{
+  color: var(--title-color);
+  cursor: pointer;
+  transition: all .3s ease;
+  font-weight: 700;
+}
+
+
+  .link-page:hover path {
+    stroke: var(--title-color); /* Замените fill на атрибут, который вы используете для цвета в вашем SVG */
+    transition: all .3s ease;
+  }
+
 
 .slider {
   font-size: 7px;
@@ -291,3 +306,50 @@ body {
 
 
 /* ---------------footer--------------- */
+/* ----------------------------------------------------------- NEXT 7 DAYS PAGE----------------------------------------------------------- */
+.modal-nextPage{
+  display: none;
+}
+
+.header__title {
+  font-family: Inter;
+  font-size: 11px;
+}
+
+.modal-nextPage .meteo__card {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meteo__day {
+  color: var(--text-color);
+  font-size: 7px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.card__temp {
+  color: var(--text-color);
+  font-size: 7px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.modal-nextPage .degree__wrapper { 
+  display: flex;
+  align-items: center;
+}
+
+.modal-nextPage .main{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.header__arrow-prev{
+  cursor: pointer;
+}
+.header__arrow-prev:hover path{
+  stroke: #F39876;
+  transition: all .3s ease;
+  cursor: pointer;
+}

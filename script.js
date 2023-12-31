@@ -4,6 +4,25 @@ burger.addEventListener('click',() =>{
     burger.classList.toggle('active');
 });
 
+const linkPage = document.querySelector('.link-page')
+const arrowPrev = document.querySelector('.header__arrow-prev')
+const page1 = document.querySelector('.modal-wrapper')
+const page2 = document.querySelector('.modal-nextPage')
+
+linkPage.addEventListener('click', function () {
+
+    page1.style.display = 'none';
+    page2.style.display = 'block';
+  });
+
+  arrowPrev.addEventListener('click', function () {
+
+    page1.style.display = 'block';
+    page2.style.display = 'none';
+  });
+
+
+// ----------------------------- API weather ----------------------------- 
 
 const apiKey = 'bd13f22f7ddfb02c48dc271e1177ace9';
 const cityName = 'Рыбница';
@@ -27,7 +46,7 @@ const fetchData = async () => {
 }
 fetchData()
 
-
+// ----------------------------- swiper----------------------------- 
 document.addEventListener('DOMContentLoaded', function () {
     var mySwiper = new Swiper('.swiper', {
       // Настройки слайдера
