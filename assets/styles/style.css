@@ -208,6 +208,12 @@ body {
   display: flex;
   padding: 8px 11px;
 }
+
+.meteo__card:hover{
+  background: rgba(255, 255, 255, 0.60);
+  transition: all .7s ease;
+
+}
 .card__image {
   width: 22px;
   height: 22px;
@@ -266,7 +272,7 @@ body {
 
 
   .link-page:hover path {
-    stroke: var(--title-color); /* Замените fill на атрибут, который вы используете для цвета в вашем SVG */
+    stroke: var(--title-color); 
     transition: all .3s ease;
   }
 
@@ -311,14 +317,17 @@ body {
   display: none;
 }
 
+.modal-nextPage .main{
+  padding: 15px 16px;
+}
+
 .header__title {
   font-family: Inter;
   font-size: 11px;
 }
 
 .modal-nextPage .meteo__card {
-  justify-content: space-between;
-  align-items: center;
+    display: block;
 }
 
 .meteo__day {
@@ -352,4 +361,27 @@ body {
   stroke: #F39876;
   transition: all .3s ease;
   cursor: pointer;
+}
+.meteo__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.meteo__hidden{
+  display: none;
+  justify-content: space-between;
+  padding: 11px 28px;
+}
+.--active .meteo__hidden{
+  display: flex;
+} 
+.hidden__row{
+  text-align: center;
+}
+
+.card__text{
+  font-size: 7px;
+  padding-top: 8px;
+  font-weight: 600;
+  color: var(--text-color);
 }

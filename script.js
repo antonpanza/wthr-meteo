@@ -63,3 +63,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
+
+
+// ----------------------------- hidden-cards---------------------------- 
+const meteoCards = document.querySelectorAll('.modal-nextPage .meteo__card');
+
+     meteoCards.forEach(card => {
+         card.addEventListener('click', () => {
+             document.querySelectorAll('.meteo__hidden').forEach(hiddenBlock => {
+                 hiddenBlock.style.display = 'none';
+             });
+ 
+
+             const hiddenBlock = card.querySelector('.meteo__hidden');
+             if (hiddenBlock) {
+                 hiddenBlock.style.display = (hiddenBlock.style.display === 'none' || hiddenBlock.style.display === '') ? 'flex' : 'none';
+             }
+         });
+     });
