@@ -2,15 +2,467 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wheather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-    <main>
-        <h1>Wheather</h1>
-        <p>content</p>
-    </main>
+    <div class="app__wrapper">
+        <div class="mobile__wrapper">
+          <div class="modal-wrapper"  >
+            <header class="header">
+                <div class="header__inner">
+                    <div class="location__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M14.7956 14.5835L16.4926 16.2805M12.6035 12.8157C10.0651 15.3541 5.94957 15.3541 3.41116 12.8157C0.872753 10.2773 0.872753 6.16171 3.41116 3.6233C5.94957 1.0849 10.0651 1.0849 12.6035 3.6233C15.142 6.16171 15.142 10.2773 12.6035 12.8157Z" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
 
+                    <div class="header__dots">
+                        <div class="dots__item"></div>
+                        <div class="dots__item"></div>
+                        <div class="dots__item long"></div>
+                        <div class="dots__item"></div>
+                    </div>
+                    <div class="header__menu">
+                        <div class="menu__wrapper">
+                            <div class="header__burger"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="info__wrapper">
+                    <div class="location__info">
+                        Stockholm,<br>
+                        Sweden
+                    </div>
+                    <div class="date__info">
+                        Tue, Jun 30
+                    </div>
+                </div>
+                <div class="location__meteo--wrapper">
+                    <div class="meteo__img">
+                    </div>
+                    <div class="meteo__data">
+                        <div class="degree__wrapper">
+                            <div class="meteo__degree">
+                                19
+                            </div>
+                            <div class="meteo__status">
+                                Rainy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="meteo__card--inner">
+                    <div class="meteo__card">
+                        <div class="card__image">
+                            <img src="./assets/img/umbrella.png" alt="umbrella">
+                        </div>
+                        <div class="card__data">
+                            <div class="data__title">RainFall</div>
+                            <div class="data__status">3cm</div>
+                        </div>
+                    </div>
+                    <div class="meteo__card">
+                        <div class="card__image">
+                            <img src="./assets/img/wind.png" alt="umbrella">
+                        </div>
+                        <div class="card__data">
+                            <div class="data__title">Wind</div>
+                            <div class="data__status">19km/h</div>
+                        </div>
+                    </div>
+                    <div class="meteo__card">
+                        <div class="card__image">
+                            <img src="./assets/img/3.svg" alt="umbrella">
+                        </div>
+                        <div class="card__data">
+                            <div class="data__title">Humidity</div>
+                            <div class="data__status">64%</div>
+                        </div>
+                    </div>
+                    <div class="weatherInfo"></div>
+                </div>
+            </main>
+            <footer class="footer hourly__forecast">
+                <div class="tabs-title">
+                    <div class="tabs-wrapper">
+                        <span data-tab="today" class="tab active">Today</span>
+                        <span data-tab="tomorrow" class="tab">Tomorrow</span>
+                    </div>
+                    <div class="link-page">
+                        <span>Next 7 Days</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="4" height="6" viewBox="0 0 4 6" fill="none">
+                            <path d="M1 0.878693L3.12132 3.00001L1 5.12133" stroke="#D6996B" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="slider swiper">
+
+                    <div class="slider-scrollbar swiper-scrollbar"></div>
+
+                    <div class="slider-container swiper-wrapper">
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">00:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">03:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide ">
+                            <div class="card-inner">
+                                <div class="card-time">06:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">09:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">12:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">15:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">18:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+
+                        <div class="slider-card swiper-slide">
+                            <div class="card-inner">
+                                <div class="card-time">21:00</div>
+                                <div class="card-img">
+                                    <img src="./assets/img/slider-icon/test-icon.png" alt="weather-icon">
+                                </div>
+                                <div class="card-temp">19 °</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+          </div>
+          <div class="modal-nextPage">
+
+            <div class="header">
+                <div class="header__inner">
+                    <div class="header__arrow-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path d="M1.99634 5.6049L5.88543 1.71581M5.88543 10.2011L1.99634 6.31201M1.63543 6.0114L12.3873 6.0114" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="header__title">Next 7 Days</div>
+                    <div class="header__menu">
+                        <div class="menu__wrapper">
+                            <div class="header__burger"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+
+                <div class="meteo__card --active">
+                   <div class="meteo__wrapper">
+                    <div class="meteo__day">Thursday</div>
+                    <div class="degree__wrapper">
+                        <div class="card__temp">22 °</div>
+                        <div class="card-img">
+                            <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                        </div>
+                    </div>
+                   </div>
+                   <div class="meteo__hidden">
+                        <div class="hidden__row">
+                            <div class="card__image">
+                                <img src="./assets/img/umbrella.png" alt="umbrella">
+                            </div>
+                            <div class="card__text">1 cm</div>
+                        </div>
+                        <div class="hidden__row">
+                            <div class="card__image">
+                                <img src="./assets/img/umbrella.png" alt="umbrella">
+                            </div>
+                            <div class="card__text">15 km/h</div>
+                        </div>
+                        <div class="hidden__row">
+                            <div class="card__image">
+                                <img src="./assets/img/umbrella.png" alt="umbrella">
+                            </div>
+                            <div class="card__text">50 %</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+                 <div class="meteo__card">
+                    <div class="meteo__wrapper">
+                     <div class="meteo__day">Thursday</div>
+                     <div class="degree__wrapper">
+                         <div class="card__temp">22 °</div>
+                         <div class="card-img">
+                             <img src="./assets/img/slider-icon/test-icon.png" alt="">
+                         </div>
+                     </div>
+                    </div>
+                    <div class="meteo__hidden">
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">1 cm</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">15 km/h</div>
+                         </div>
+                         <div class="hidden__row">
+                             <div class="card__image">
+                                 <img src="./assets/img/umbrella.png" alt="umbrella">
+                             </div>
+                             <div class="card__text">50 %</div>
+                         </div>
+                     </div>
+                 </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
