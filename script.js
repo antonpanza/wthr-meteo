@@ -15,7 +15,7 @@ linkPage.addEventListener('click', function () {
     page2.style.display = 'block';
   });
 
-  arrowPrev.addEventListener('click', function () {
+arrowPrev.addEventListener('click', function () {
 
     page1.style.display = 'block';
     page2.style.display = 'none';
@@ -82,3 +82,33 @@ const meteoCards = document.querySelectorAll('.modal-nextPage .meteo__card');
              }
          });
      });
+
+
+     // ----------------------------- tomorrow-tabs---------------------------- 
+
+     const btnToday = document.querySelector('#btnToday');
+     const btnTomorrow = document.querySelector('#btnTomorrow');
+
+     const sliderToday = document.querySelector('#today');
+     const sliderTomorrow = document.querySelector('#tomorrow');
+
+     function resetTabs() {
+      sliderToday.style.display = 'none';
+      sliderTomorrow.style.display = 'none';
+
+      btnToday.classList.remove('active');
+      btnTomorrow.classList.remove('active');
+  }
+
+  // Обработчики событий для кнопок
+  btnToday.addEventListener('click', function() {
+      resetTabs(); // Сначала сбрасываем все табы
+      sliderToday.style.display = 'block'; // Показываем нужный слайд
+      btnToday.classList.add('active'); // Добавляем класс 'active' к кнопке
+  });
+
+  btnTomorrow.addEventListener('click', function() {
+      resetTabs(); // Сначала сбрасываем все табы
+      sliderTomorrow.style.display = 'block'; // Показываем нужный слайд
+      btnTomorrow.classList.add('active'); // Добавляем класс 'active' к кнопке
+  });

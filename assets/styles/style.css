@@ -254,6 +254,9 @@ body {
 .tab:first-child {
   margin-right: 12px;
 }
+.tab{
+  cursor: pointer;
+}
 
 .tab.active {
   color: var(--title-color);
@@ -306,6 +309,9 @@ body {
 .card-img img {
   height: 24px;
   width: 24px;
+}
+#tomorrow{
+  display: none;
 }
 
 
@@ -363,6 +369,7 @@ body {
   cursor: pointer;
 }
 .meteo__wrapper{
+  height: 26.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
